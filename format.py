@@ -31,6 +31,9 @@ def standard(hr, min, period):
     else:
         hour = f'{int(hr):02}' if period == 'AM' else f'{int(hr) + 12:02}'
 
+    minute = f'{int(min):02}' if min else '00'
+    return f'{hour}:{minute}'
+
 
 
 if __name__ == '__main__':
