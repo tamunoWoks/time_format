@@ -17,6 +17,12 @@ def convert(s):
         start_time = standard(match.group(1), match.group(2), match.group(3))
         end_time = standard(match.group(4), match.group(5), match.group(6))
 
+        #Return the converted times in 24hr format, concatenated with 'to'
+        return f'{start_time} to {end_time}'
+    else:
+        #Raise ValueError if input format is invalid
+        raise ValueError('Invalid input format')
+
 
 
 if __name__ == '__main__':
