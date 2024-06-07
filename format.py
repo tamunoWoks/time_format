@@ -22,6 +22,14 @@ def convert(s):
     else:
         #Raise ValueError if input format is invalid
         raise ValueError('Invalid input format')
+    
+
+def standard(hr, min, period):
+    #Convert the hour part to 24hr format
+    if hr == '12':
+        hour = '00' if period == 'AM' else '12'
+    else:
+        hour = f'{int(hr):02}' if period == 'AM' else f'{int(hr) + 12:02}'
 
 
 
